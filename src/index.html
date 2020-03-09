@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Browser-fetch-github-post</title>
+  </head>
+  <body>
+    <main class="container">
+      <form>
+        <h1>Create a new repository</h1>
+        <div>
+          <label for="name">Repository name</label>
+          <input class="repo-name" type="text" id="name" required />
+        </div>
+        <div>
+          <label for="description">Description (optional)</label>
+          <input class="description" type="text" id="" />
+        </div>
+        <div>
+          <input
+            class="public-radio"
+            type="radio"
+            name="repoPrivacy"
+            id="repotype"
+            value="public"
+            checked
+          />
+          <label for="repotype"
+            >Public
+            <p class="hint">
+              Anyone can see this repository. You choose who can commit.
+            </p></label
+          >
+        </div>
+        <div>
+          <input
+            class="private-radio"
+            type="radio"
+            name="repoPrivacy"
+            id="repotype"
+            value="private"
+          />
+          <label for="repotype"
+            >Private
+            <p class="hint">
+              You choose who can see and commit to this repository.
+            </p>
+          </label>
+        </div>
+        <div>
+          <input type="checkbox" id="readme" class="readme" />
+          <label for="readme"
+            >Initialize this repository with a README
+            <p class="hint">
+              This will let you immediately clone the repository to your
+              computer
+            </p>
+          </label>
+        </div>
+        <button class="secondary-button" type="reset">Cancel</button>
+        <button class="primary-button" type="submit">Create repository</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+#No libs
+node_modules
+# No build files
+dist
+# No secrets
+.env
