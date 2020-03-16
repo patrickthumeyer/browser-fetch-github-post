@@ -7,24 +7,100 @@
     <title>Browser-fetch-github-post</title>
   </head>
   <body>
+    <div class="inactive-background"></div>
     <header>
       <section class="github-header">
         <img class="logo" src="./images/GitHub-Mark-120px-plus.png" alt="" />
         <img class="github" src="./images/GitHub_Logo.png" alt="" />
         <h1 class="clone">Clone</h1>
       </section>
-      <section class="repo-and-user">
-        <a class="new-repo" href=""><span>New Repository</span></a>
-        <!-- <span>Signed in as Patrick</span>
+      <section class="options-container">
+        <section class="new-repo-container">
+          <a class="new-repo-link" href=""><span>New Repository</span></a>
+        </section>
+        <section class="repo-and-user">
+          <!-- <span>Signed in as Patrick</span>
         <img
           class="user-img"
           src="./images/GitHub-Mark-120px-plus.png"
           alt=""
         /> -->
+        </section>
       </section>
     </header>
     <main class="container">
-      <section class="sidebar"></section>
+      <section class="sidebar">
+        <div class="close">
+          ✕
+        </div>
+        <form>
+          <h1>Create a new repository</h1>
+          <div>
+            <label for="name">Repository name</label>
+            <input class="repo-name" type="text" id="name" required />
+          </div>
+          <div>
+            <label for="description">Description (optional)</label>
+            <input class="description" type="text" id="" />
+          </div>
+          <div>
+            <input
+              class="public-radio"
+              type="radio"
+              name="repoPrivacy"
+              id="repotype"
+              value="public"
+              checked
+            />
+            <label for="repotype"
+              >Public
+              <p class="hint">
+                Anyone can see this repository. You choose who can commit.
+              </p></label
+            >
+          </div>
+          <div>
+            <input
+              class="private-radio"
+              type="radio"
+              name="repoPrivacy"
+              id="repotype"
+              value="private"
+            />
+            <label for="repotype"
+              >Private
+              <p class="hint">
+                You choose who can see and commit to this repository.
+              </p>
+            </label>
+          </div>
+          <div>
+            <input type="checkbox" id="readme" class="readme" />
+            <label for="readme"
+              >Initialize this repository with a README
+              <p class="hint">
+                This will let you immediately clone the repository to your
+                computer
+              </p>
+            </label>
+          </div>
+          <button class="secondary-button btn" type="reset">Cancel</button>
+          <button class="primary-button btn" type="submit">
+            Create repository
+          </button>
+        </form>
+        <div class="sk-cube-grid">
+          <div class="sk-cube sk-cube1"></div>
+          <div class="sk-cube sk-cube2"></div>
+          <div class="sk-cube sk-cube3"></div>
+          <div class="sk-cube sk-cube4"></div>
+          <div class="sk-cube sk-cube5"></div>
+          <div class="sk-cube sk-cube6"></div>
+          <div class="sk-cube sk-cube7"></div>
+          <div class="sk-cube sk-cube8"></div>
+          <div class="sk-cube sk-cube9"></div>
+        </div>
+      </section>
       <ul class="list-container">
         <!-- <li>
           <div class="repo-headline-container">
@@ -37,74 +113,6 @@
           </p>
         </li> -->
       </ul>
-      <div class="sk-cube-grid">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
-        <div class="sk-cube sk-cube3"></div>
-        <div class="sk-cube sk-cube4"></div>
-        <div class="sk-cube sk-cube5"></div>
-        <div class="sk-cube sk-cube6"></div>
-        <div class="sk-cube sk-cube7"></div>
-        <div class="sk-cube sk-cube8"></div>
-        <div class="sk-cube sk-cube9"></div>
-      </div>
-
-      <form>
-        <h1>Create a new repository</h1>
-        <div>
-          <label for="name">Repository name</label>
-          <input class="repo-name" type="text" id="name" required />
-        </div>
-        <div>
-          <label for="description">Description (optional)</label>
-          <input class="description" type="text" id="" />
-        </div>
-        <div>
-          <input
-            class="public-radio"
-            type="radio"
-            name="repoPrivacy"
-            id="repotype"
-            value="public"
-            checked
-          />
-          <label for="repotype"
-            >Public
-            <p class="hint">
-              Anyone can see this repository. You choose who can commit.
-            </p></label
-          >
-        </div>
-        <div>
-          <input
-            class="private-radio"
-            type="radio"
-            name="repoPrivacy"
-            id="repotype"
-            value="private"
-          />
-          <label for="repotype"
-            >Private
-            <p class="hint">
-              You choose who can see and commit to this repository.
-            </p>
-          </label>
-        </div>
-        <div>
-          <input type="checkbox" id="readme" class="readme" />
-          <label for="readme"
-            >Initialize this repository with a README
-            <p class="hint">
-              This will let you immediately clone the repository to your
-              computer
-            </p>
-          </label>
-        </div>
-        <button class="secondary-button btn" type="reset">Cancel</button>
-        <button class="primary-button btn" type="submit">
-          Create repository
-        </button>
-      </form>
     </main>
   </body>
 </html>

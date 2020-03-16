@@ -95,12 +95,29 @@ header {
   align-items: flex-start;
 }
 
+.close {
+  margin: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .date-created {
   font-size: 14px;
 }
 
-.new-repo {
-  margin-right: 20px;
+.options-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.new-repo-container {
+  justify-self: right;
+  margin: 20px;
+}
+
+.new-repo-link {
   color: lightgrey;
   text-decoration: none;
   font-weight: 300;
@@ -128,20 +145,43 @@ header {
   font-weight: 300;
 }
 
+.inactive-background {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+
+.inactive-background-active {
+  visibility: visible;
+  opacity: 0.4;
+  transition-duration: 0.4s;
+}
+
 .sidebar {
   height: 100vh;
   width: 450px;
-  background-color: white;
+  background-color: #ebebeb;
   position: fixed;
-  right: -470px;
+  right: 0px;
   top: 0px;
   z-index: 100;
   box-shadow: -8px 0px 15px 1px rgb(65, 65, 65);
+  opacity: 0;
+  transform: translateX(100%);
+  transition-duration: 0.4s;
 }
 
 .sidebar-active {
-  right: 0px;
-  transition: 0.3s;
+  transform: translateX(0%);
+  opacity: 1;
+  transition-duration: 0.4s;
 }
 
 h3 {
@@ -159,13 +199,9 @@ li {
 }
 
 form {
-  margin: 30px;
-  margin-bottom: 80px;
-  padding: 30px;
+  margin: 30px 30px 0px 30px;
+  padding: 30px 30px 0px 30px;
   border-radius: 10px;
-  background: #ebebeb;
-  box-shadow: inset 31px 31px 63px #c8c8c8, inset -31px -31px 63px #ffffff,
-    31px 31px 63px #c8c8c8, -31px -31px 63px #ffffff;
 }
 
 h1 {
@@ -195,7 +231,7 @@ h1 {
   font-size: 14px;
   border-radius: 3px;
   border: 1px solid grey;
-  color: grey;
+  color: rgb(87, 87, 87);
   cursor: pointer;
 }
 

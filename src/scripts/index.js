@@ -17,6 +17,7 @@ class CreateRepo {
     this.attachEventListener();
     this.displayUser();
     this.openSidebar();
+    this.closeSidebar();
   }
 
   displayUser() {
@@ -37,7 +38,7 @@ class CreateRepo {
           alt=""
           />
           `;
-        document.querySelector(".repo-and-user").innerHTML += loggedUser;
+        document.querySelector(".repo-and-user").innerHTML = loggedUser;
       })
       .catch(error => {
         console.error("Error:", error);
@@ -121,9 +122,21 @@ class CreateRepo {
   }
 
   openSidebar() {
-    document.querySelector(".new-repo").addEventListener("click", e => {
+    document.querySelector(".new-repo-link").addEventListener("click", e => {
       e.preventDefault();
       document.querySelector(".sidebar").classList.add("sidebar-active");
+      document
+        .querySelector(".inactive-background")
+        .classList.add("inactive-background-active");
+    });
+  }
+
+  closeSidebar() {
+    document.querySelector(".close").addEventListener("click", e => {
+      document.querySelector(".sidebar").classList.remove("sidebar-active");
+      document
+        .querySelector(".inactive-background")
+        .classList.remove("inactive-background-active");
     });
   }
 }
