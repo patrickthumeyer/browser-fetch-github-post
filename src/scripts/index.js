@@ -36,7 +36,7 @@ class CreateRepo {
           alt=""
           />
           `;
-        document.querySelector(".user").innerHTML = loggedUser;
+        document.querySelector(".repo-and-user").innerHTML += loggedUser;
       })
       .catch(error => {
         console.error("Error:", error);
