@@ -16,6 +16,7 @@ class CreateRepo {
     this.generateRepoList();
     this.attachEventListener();
     this.displayUser();
+    this.openSidebar();
   }
 
   displayUser() {
@@ -117,6 +118,13 @@ class CreateRepo {
       .catch(error => {
         console.error("Error:", error);
       });
+  }
+
+  openSidebar() {
+    document.querySelector(".new-repo").addEventListener("click", e => {
+      e.preventDefault();
+      document.querySelector(".sidebar").classList.add("sidebar-active");
+    });
   }
 }
 
