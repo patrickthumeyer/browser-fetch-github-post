@@ -44,7 +44,7 @@ class CreateRepo {
   }
 
   generateRepoList() {
-    document.querySelector(".list-container").innerHTML = "";
+    // document.querySelector(".list-container").innerHTML = "";
     fetch(this.sortedURL, {
       method: "GET",
       headers: {
